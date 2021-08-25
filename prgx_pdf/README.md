@@ -26,4 +26,12 @@ Project to extract specifict information from PDF (image) files and store it in 
 - All the extractions ordered by the newest id to the oldest.
 
 ---
+### Requirements:
+- Flask `pip install flask`
+- pdf2image `pip install pdf2image`
+- opencv `pip install opencv-python`
+- pytesserac `pip install pytesserac`
+- Python version 2.5.x onwards
+
+---
 **Author:** [John Alexander Urrego Sandoval](alexander.urrego@gmail.com)
