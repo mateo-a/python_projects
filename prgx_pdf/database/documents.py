@@ -5,6 +5,12 @@ from .connection import create_connection
 
 
 def insert_document(data):
+    """ Function to insert a document into the database. 
+
+    data: Variable that contains the data to be inserted which was extracted of
+         the file    
+    """
+
     conn = create_connection()
 
     sql = """INSERT INTO EXTRACTION(Vendor_Name, Fiscal_Number, \
@@ -27,6 +33,11 @@ def insert_document(data):
 
 
 def select_all_documents(table):
+    """ Function to select all documents from a specified table on the database.
+
+    table: Variable that contains the name of the table to consult.
+    """
+
     conn = create_connection()
 
     sql = "SELECT rowid as id, * FROM " + table + " ORDER BY id DESC;"

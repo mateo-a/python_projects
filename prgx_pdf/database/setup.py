@@ -5,11 +5,16 @@ from .connection import create_connection
 
 
 def read_file(path):
+    """ Function to read a file"""
+
     with open(path, 'r') as sql_file:
         return sql_file.read()
 
 
 def create_tables():
+    """ Function that opens a connection to database and invokes the SQL to
+    create tables into it """
+
     conn = create_connection()
 
     path = 'database/sql/tables.sql'

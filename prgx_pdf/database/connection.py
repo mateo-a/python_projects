@@ -3,6 +3,8 @@ from sqlite3 import Error
 
 
 def create_connection():
+    """ Function to create a connection with sqlite database. """
+
     conn = None
 
     try:

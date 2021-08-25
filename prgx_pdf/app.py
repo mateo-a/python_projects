@@ -9,6 +9,13 @@ setup.create_tables()
 
 @app.route('/extract', methods=['GET', 'POST'])
 def add_document():
+    """ Endpoint that receives the path of the PDF document, extracts the information, stores the information in the database.
+
+    RETURN: - True if the information was successfully added to the database.
+            - The data base id of the row.
+            - The extracted information.
+    """
+
     path = request.args.get('doc_path')
 
     if path:
@@ -37,6 +44,8 @@ def add_document():
 
 @app.route('/db_data/', methods=['GET'])
 def get_documents():
+    """ Endpoint that receives the database table, and returns all fields
+    contained in the table ordered by the newest id to the oldest. """
 
     table = request.args.get('table_name')
     data = documents.select_all_documents(table)

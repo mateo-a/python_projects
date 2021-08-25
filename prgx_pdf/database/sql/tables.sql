@@ -1,3 +1,7 @@
+/*
+*  SQL instruction to create the table to store the data extracted
+*/
+
 CREATE TABLE IF NOT EXISTS EXTRACTION(
     Vendor_Name TEXT,
     Fiscal_Number TEXT,
